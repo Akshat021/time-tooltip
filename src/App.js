@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import {Time} from "./lib/index"
+import { Box } from "@mui/material";
 
-function App() {
+const App = () => {
+  const style = {
+    "color" : "red"
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+      <Box>
+        {/* <Tooltip title={"Drag me!"} className='dragHandle'> */}
+          <Time style={style} date={new Date()} />
+        {/* </Tooltip> */}
+        
+      </Box>
+  )
 }
-
 export default App;
