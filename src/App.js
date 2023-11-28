@@ -5,17 +5,11 @@ const App = () => {
   const style = {
     "color" : "red"
   }
-  
-  // const sevenDaysAgo = new Date(1701150663732);
-  const sevenDaysAgo = new Date();
-  // sevenDaysAgo.setDate(sevenDaysAgo.getDate());
-  sevenDaysAgo.setDate(sevenDaysAgo.getDate()-1);
+  const current = new Date();
+  // current.setMinutes(current.getMinutes() + 5);
   return (
       <Box>
-        {/* <Tooltip title={"Drag me!"} className='dragHandle'> */}
-          <Time style={style} date={sevenDaysAgo } />
-        {/* </Tooltip> */}
-          {console.log(new Date())}
+          <Time style={style} date={current} />
       </Box>
   )
 }
