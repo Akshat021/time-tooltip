@@ -15,7 +15,7 @@ const Time = ({ date, style }) => {
         } else if (diff < 60 * 60 * 1000) {
             const minutes = Math.floor(diff / (60 * 1000));
             const seconds = Math.floor((diff % (60 * 1000)) / 1000);
-            return `${minutes} minute${minutes !== 1 ? "s" : ""} and ${seconds} second${seconds !== 1 ? "s" : ""} ago`;
+            return `${minutes} minute${minutes !== 1 ? "s" : ""} ago`;
         } else if (diff < 24 * 60 * 60 * 1000) {
             const hours = Math.floor(diff / (60 * 60 * 1000));
             return `${hours} hour${hours !== 1 ? "s" : ""} ago`;
